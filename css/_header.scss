@@ -1,0 +1,286 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+    .nav-brand {
+        margin-left: 2rem;
+        img {
+            height: 45px;
+            width: auto;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    .hamburger {
+        position: absolute;
+        top: 2.5rem;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        right: 3rem;
+        transition: all 0.3s ease-in-out;
+        .line {
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+            transition: all 0.3s ease-in;
+        }
+        .line::before,
+        .line::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+            transition: all 0.3s ease-in;
+        }
+        .line::before {
+            transform: translateY(-8px);
+        }
+        .line::after {
+            transform: translateY(8px);
+        }
+    }
+    .hamburger.close {
+        .line {
+            background-color: transparent;
+        }
+        .line::before {
+            transform: translateY(0) rotate(45deg);
+        }
+        .line::after {
+            transform: translateY(0) rotate(-45deg);
+        }
+    }
+    .navbar-nav {
+        transition: all 0.3s ease-in-out;
+        .nav-item {
+            display: flex;
+            margin-right: 1rem;
+            margin-top: 10px;
+            transition: all 0.5s ease-in-out;
+            .nav-link {
+                padding: 0 2rem;
+                transition: all 0.5s ease-in-out;
+                text-align: center;
+                a {
+                    color: #384156;
+                    transition: all 0.1s ease-in;
+                    &:hover {
+                        color: rgba(252, 225, 106, 0.856);
+                        font-size: 105%;
+                    }
+                }
+            }
+            .soc-link {
+                transition: all 0.5s ease-in-out;
+                text-align: center;
+
+                a {
+                    color: #384156;
+                    transition: all 0.1s ease-in;
+                    margin: 0 7px;
+                    &:hover {
+                        color: rgba(252, 225, 106, 0.856);
+                        font-size: 105%;
+                    }
+                }
+            }
+        }
+    }
+}
+section {
+    .bg-site {
+        position: relative;
+        min-height: 82vh;
+        .bg-content {
+            text-align: center;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding: 12rem 0 5rem 3rem;
+            h2 {
+                font-size: 205%;
+                margin-bottom: 1rem;
+                font-weight: 100;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+                color: #384156;
+            }
+            p {
+                font-size: 115%;
+                line-height: 34px;
+                color: #384156;
+                font-weight: lighter;
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 0.5s ease-in-out;
+            }
+            .btn {
+                font-size: 110%;
+                align-self: center;
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        background-image: linear-gradient(53deg, white 15%, transparent 69%),
+            url(../assets/img/debby-hudson-MzSqFPLo8CE-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3rem;
+            background-image: linear-gradient(to top, white, transparent);
+        }
+    }
+}
+.navbar.nav-collapse {
+    .navbar-nav {
+        left: 25%;
+        box-shadow: -2px 12px 11px #a0a0a0;
+    }
+    background-color: white;
+}
+.navbar.nav-scroll {
+    box-shadow: 0px 4px 16px #d3d3d3;
+    height: 60px;
+    background-color: #ffffff;
+    .nav-brand {
+        img {
+            height: 38px;
+        }
+    }
+    .hamburger {
+        top: 2rem;
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 912px) {
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: 0 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    padding: 0 1.4rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 753px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+
+        .nav-brand {
+            align-self: flex-start;
+            img {
+                margin-top: 10px;
+            }
+        }
+        .hamburger {
+            display: block;
+        }
+        .navbar-nav {
+            display: block;
+            position: absolute;
+            width: 75%;
+            height: 100vh;
+            left: 100%;
+            top: 70px;
+            background-color: white;
+            .nav-item {
+                flex-direction: column;
+                margin: 10px 0 0 0;
+                padding-bottom: 10px;
+                .nav-link {
+                    padding: 0;
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 1rem 0;
+                    }
+                }
+                .soc-link {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .navbar.nav-scroll {
+        .navbar-nav {
+            top: 60px;
+        }
+    }
+}
+@media (max-width: 602px) {
+    .navbar {
+        .nav-brand {
+            img {
+                height: 41px;
+            }
+        }
+    }
+}
+@media (max-width: 512px) {
+    .navbar {
+        .nav-brand {
+            margin-left: 1rem;
+        }
+        .hamburger {
+            right: 1.5rem;
+        }
+    }
+    .navbar.nav-scroll {
+        .hamburger {
+            i {
+                font-size: 140%;
+            }
+        }
+    }
+    section {
+        .bg-site {
+            .bg-content {
+                width: 100%;
+                padding: 10rem 1rem 4rem 1.5rem;
+                .btn {
+                    padding: 0.7rem 2rem;
+                }
+            }
+            background-image: linear-gradient(45deg, white 31%, transparent),
+                url(../assets/img/debby-hudson-MzSqFPLo8CE-unsplash.jpg);
+        }
+    }
+}

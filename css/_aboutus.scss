@@ -1,0 +1,126 @@
+.about {
+    margin: 4rem 3rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.5fr 2fr;
+    grid-template-areas:
+        "h2 img"
+        "text img";
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+    .about-head {
+        grid-area: h2;
+        h2 {
+            font-size: 200%;
+            font-weight: 100;
+            padding-left: 1rem;
+            border-left: 5px solid #d3d3d3;
+        }
+    }
+    .about-img {
+        grid-area: img;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        img {
+            display: block;
+            width: 85%;
+            margin: 0 auto;
+            box-shadow: 7px 7px 11px #757575;
+            border-radius: 5px;
+        }
+    }
+    .about-text {
+        justify-content: center;
+        grid-area: text;
+        padding-left: 1rem;
+        margin-right: 1rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all ease-in-out 0.5s;
+        p {
+            line-height: 34px;
+            color: #384156;
+            font-weight: lighter;
+        }
+        .btn {
+            font-size: 95%;
+            margin-left: 1rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all ease-in-out 0.5s;
+        }
+    }
+}
+@media (max-width: 1179px) {
+    .about {
+        grid-template-columns: 1fr 1fr;
+        .about-img {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 924px) {
+    .about {
+        margin: 2rem 2rem;
+        grid-template-columns: 1.3fr 1fr;
+        .about-head {
+            h2 {
+                font-size: 175%;
+            }
+        }
+        .about-img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 753px) {
+    .about {
+        margin: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        .about-head {
+            h2 {
+                padding-left: 0;
+                border-left: none;
+                text-align: center;
+                font-size: 200%;
+                font-weight: 400;
+                margin-bottom: 1rem;
+            }
+        }
+        .about-img {
+            img {
+                width: 77%;
+                box-shadow: 7px 7px 11px #757575, -7px 7px 11px #757575;
+            }
+        }
+        .about-text {
+            margin-top: 3rem;
+            padding: 0 3rem;
+            text-align: justify;
+            margin-right: 0;
+            .btn {
+                margin-left: 0;
+                display: block;
+                margin: 1rem auto 0;
+            }
+        }
+    }
+}
+@media (max-width: 524px) {
+    .about {
+        .about-text {
+            padding: 0 1rem;
+            margin-top: 2rem;
+            p {
+                line-height: 180%;
+                text-align: center;
+            }
+        }
+    }
+}

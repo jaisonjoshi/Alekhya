@@ -1,0 +1,53 @@
+[
+    {
+        "name" : "A beautiful country",
+        "src" : "./assets/img/IMG_20200828_125348.jpg",
+        "category" : "category"
+
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_125643.jpg",
+         "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_131325.jpg",
+        "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_131341.jpg",
+          "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200908_162959.jpg",
+        "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_131424.jpg",
+         "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_131543.jpg",
+        "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200908_162926.jpg",
+          "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200908_162959.jpg",
+         "category" : "category"
+    },
+    {
+        "name" : "A beautiful place",
+        "src" : "./assets/img/IMG_20200828_131325.jpg",
+         "category" : "category"
+    }
+]

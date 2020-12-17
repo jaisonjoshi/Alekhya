@@ -1,0 +1,112 @@
+.work {
+    margin-bottom: 3rem;
+    padding: 0 3rem 3rem 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+    background-image: linear-gradient(to bottom, transparent, #f7f7f7);
+    .work-head {
+        h2 {
+            font-size: 200%;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+        .work-head-body {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 106%;
+            }
+            a {
+                color: #384156;
+                font-size: 90%;
+            }
+        }
+    }
+    .work-body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        .card {
+            width: 23%;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease-in-out;
+            box-shadow: 2px 4px 8px #bfbfbf, -2px 4px 16px #bfbfbf;
+            img {
+                width: 100%;
+            }
+            .card-body {
+                margin: 10px 14px;
+                h4 {
+                    font-weight: 400;
+                    margin-bottom: 4px;
+                }
+                span {
+                    background-color: #d8d8d8;
+                    border-radius: 20px;
+                    padding: 2px 7px;
+                    font-size: 78%;
+                }
+            }
+        }
+        .card8,
+        .card9 {
+            display: none;
+        }
+    }
+    .work-footer {
+        margin-top: 1rem;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.5s ease-in-out;
+        h4 {
+            font-weight: 400;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 95%;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .work {
+        .work-body {
+            .card {
+                width: 22%;
+            }
+        }
+    }
+}
+@media (max-width: 753px) {
+    .work {
+        padding: 0 1.5rem 3rem 1.5rem;
+        .work-body {
+            .card {
+                width: 31%;
+            }
+            .card8 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 516px) {
+    .work {
+        .work-body {
+            .card {
+                width: 48%;
+            }
+            .card8 {
+                display: none;
+            }
+        }
+    }
+}
